@@ -1,0 +1,193 @@
+/* css_Telma */
+
+:root {
+    --background-color:rgb(249, 246, 238);
+    --main-b: rgb(198, 214, 240);
+    --secondary-b: rgb(132, 180, 153);
+    --main-m: rgb(236, 197, 100);
+    --secondary-m: rgb(130, 75, 137) ;
+    --main-a: rgb(240, 189, 219);
+    --secondary-a: rgb(220, 124, 73) ;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url(../chapter_m/fonts/Nunito-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Nunito_Italic";
+    src: url(../chapter_m/fonts/Nunito-Italic-VariableFont_wght.ttf);
+}
+
+/* editing the scroll bar -- https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--main-b);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--secondary-m);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-a);
+  }
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{  
+    background: var(--main-a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    height: 100%;
+    width: 100%;
+
+}
+
+.lock_pink{
+
+    position: absolute;
+    width: 18em ;
+    height: 16em;
+    border-radius: 2em;
+    top: 19.5em;
+    background: var(--main-a);
+    margin-left: -150px;;
+}
+
+.lock_back{
+    position: absolute;
+    width: 18em ;
+    height: 16em;
+    border-radius: 2em;
+    top: 21em;
+    background: var(--secondary-a);
+    margin-left: -150px;
+}
+
+.lock{
+    position: absolute;
+    width: 18em ;
+    height: 16em;
+    border-radius: 2em;
+    top:21em;
+    background: var(--background-color);
+    margin-left: -150px;
+    transform: translate(10px, 10px);
+
+}
+
+.handle_back{
+    position: absolute;
+    border: 3em solid var(--secondary-a);
+    width: 12em;
+    height: 11em;
+    left:50%;
+    margin-left: -5.5em;
+    top:12em;
+    border-top-left-radius: 7em;
+    border-top-right-radius: 7em;
+    transform: translate(-10px, -5px);
+}
+
+.handle{
+    position: absolute;
+    border: 3em solid var(--background-color);
+    width: 12em;
+    height: 11em;
+    left:50%;
+    margin-left: -5.5em;
+    top:12em;
+    border-top-left-radius: 7em;
+    border-top-right-radius: 7em;
+}
+
+/* pseudo-elements --> https://developer.mozilla.org/pt-BR/docs/Web/CSS/::after
+fazer a fechadura sem necessidade de outro <div> em html  */
+
+.lock:before {
+  content: '';
+  position: absolute;
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  background: var(--secondary-a);
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.lock:after {
+  content: '';
+  position: absolute;
+  width: 2.5em;
+  height: 4em;
+  border-radius: 25px;
+  background: var(--secondary-a);
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* fake password --> https://www.w3schools.com/css/css_form.asp */
+
+.password{
+  position: absolute;
+  text-align: center;
+  margin-top: 28em;
+  font-family: "Nunito", Helvetica, sans-serif;
+}
+
+.password-input {
+  display: block;
+  width: 90%;
+  margin: 1em auto;
+  padding: 0.5em;
+  font-size: 1.1em;
+  border: 2px solid var(--secondary-a); 
+  background-color: var(--background-color);
+  border-radius: 50px;
+  outline: none;
+}
+
+.password-input:focus {
+  border-color: var(--main-a);
+  box-shadow: 0 0 5px rgba(220, 135, 184, 0.7);
+}
+
+.password-input::placeholder,
+.password-input {
+  color: var(--secondary-a);
+  text-align: center;
+}
+
+.dica{
+  position: absolute;
+  text-align: center;
+  margin-top: 35em;
+  font-family: "Nunito_Italic", Helvetica, sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  color: var(--background-color);
+}
+
+

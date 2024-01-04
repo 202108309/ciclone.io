@@ -1,0 +1,456 @@
+/* css_Telma -- mobile first */
+
+:root {
+    --background-color:rgb(249, 246, 238);
+    --main-b: rgb(198, 214, 240);
+    --secondary-b: rgb(132, 180, 153);
+    --main-m: rgb(236, 197, 100);
+    --secondary-m: rgb(130, 75, 137) ;
+    --main-a: rgb(240, 189, 219);
+    --secondary-a: rgb(220, 124, 73) ;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url(assets/fonts/Nunito-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Nunito_Italic";
+    src: url(assets/fonts/Nunito-Italic-VariableFont_wght.ttf);
+}
+
+/* editing the scroll bar -- https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp */
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--main-b);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--secondary-m);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-a);
+  }
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body{
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+}
+
+header{
+    background-color: var(--main-b);
+    width: 100%;
+    height: 100%;
+    background-image: url(assets/graphics/russa_min.gif); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center bottom; 
+    text-align: center;
+}
+
+nav{
+    display: flex;
+    text-align: left;
+    font-family: "Nunito", Helvetica, sans-serif ;
+    font-weight: 700;
+}
+
+ul {
+    padding: 1.3em;
+    padding-right: 0em;
+}
+
+ul a{
+    text-decoration: none;
+    color: var(--secondary-m);
+}
+
+ul a:hover{
+    color: var(--secondary-a);
+}
+
+h1{
+    margin: 0;
+}
+
+header h2{
+    font-family: "Nunito",Helvetica, sans-serif;
+    color: var(--secondary-m);
+    font-size: 1.1em;
+    font-weight: 700;  
+    margin-top: -2em;
+}
+
+.ciclone{
+    width: 80%;
+    height: auto;
+    margin: 3em auto;
+    transition: transform 0.3s ease;
+}
+
+.ciclone:hover {
+    transform: scale(1.06);
+}
+
+
+figure{
+    display: flex;
+    position: relative;
+    height: 15em;
+    width: 15em;
+    margin: 0 auto;
+    margin-top: 10%;  
+}
+
+/* perfis histórias */
+
+.profile-container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    padding: 5em;
+    justify-content: center;
+    width: 100%;
+    height: 55em;
+    margin-bottom: 10em;
+    margin-top: 0em;
+}
+
+/* contentor perfis geral */
+
+.container-b,
+.container-m,
+.container-a {
+    position:absolute;
+    height: 34rem;
+    width: 70%;
+    box-shadow: 0px 3px 15px rgba(90, 52, 95, 0.3);
+}
+
+.container-b{
+    background-color: var(--main-b);
+    margin-left: -15%;
+}
+
+.container-m{
+    background-color: var(--main-m);
+    margin-top: 5em;
+}
+
+.container-a{
+    background-color: var(--main-a);
+    margin-top: 10em;
+    margin-left: 15%;
+}
+
+/* header perfis container */
+
+.header-b,
+.header-m,
+.header-a {
+    height: 3em;
+    width: 100%;
+}
+
+.header-b{
+    background-color: var(--secondary-b);
+}
+
+.header-m{
+    background-color: var(--secondary-m);
+}
+
+.header-a{
+    background-color: var(--secondary-a);
+}
+
+.controls{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+}
+
+.square{
+    background-color: var(--background-color);
+    height: 1.8em;
+    width:1.8em;
+    border-radius: 8px;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: 0.8em;
+    margin-right: -0.3em;
+}
+
+.name_m,
+.name_b,
+.name_a{
+    text-align: center;
+    margin: 2.5em;
+    font-family: "Nunito",Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.name_a{
+    color: var(--secondary-a);
+}
+
+.name_b{
+    color: var(--secondary-b);
+}
+
+.name_m{
+    color: var(--secondary-m);
+}
+
+.name_m h2,
+.name_b h2,
+.name_a h2 {
+    font-size: 1.2em;
+    font-weight: 700;
+    background-color: var(--background-color); 
+    display: inline-block;
+    padding: 0.3em 3em;
+    margin: 0 auto; 
+    border-radius: 25px;
+    box-shadow: 3px 3px 3px rgba(146, 66, 156, 0.2) ;
+}
+
+.name_m h3,
+.name_b h3,
+.name_a h3{
+    font-size: 0.8em;
+    font-weight: 500;
+    margin: 0.5em auto;
+    background-color: var(--background-color); 
+    display: inline-block;
+    padding: 0.3em 3em;
+    border-radius: 25px;
+    box-shadow: 3px 3px 3px rgba(146, 66, 156, 0.2) ;
+}
+
+/* perfis while hover aumenta (transform) + bring to front (z-index) */
+
+.container-b:hover,
+.container-m:hover,
+.container-a:hover {
+    transform: scale(1.06);
+    z-index: 1; 
+}
+
+.container-b,
+.container-m,
+.container-a {
+    /* smooth transition */
+    transition: transform 0.3s ease, z-index 0.3s ease;
+}
+
+
+.sobre{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin: 0 ;
+    background-color: var(--secondary-m);
+    width: 100%;
+    margin: 0 ;
+    padding: 10px;
+    font-family: "Nunito",Helvetica, sans-serif;
+    color: var(--secondary-m);
+    font-size: 1em;
+    line-height: 1.3;
+    text-align: left;
+}
+
+.quote
+{
+    background-color: var(--main-b);
+    padding: 50px;
+    margin: 10px;
+    border-radius: 15px;
+    margin-top: -90px;
+    text-align: center;
+    font-family: "Nunito_Italic",Helvetica, sans-serif;
+    font-size: 1.1em;
+    font-weight: 600;
+}
+
+.sinopse
+{
+    background-color: var(--background-color);
+    padding: 50px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.sinopse p{
+    margin-bottom: 1.1em;
+}
+
+.about{
+    background-color: var(--main-a);
+    height: fit-content;
+    padding: 50px;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.credits ,
+.top{
+    padding: 20px;
+    margin: 10px;
+    margin-bottom: 20px;
+    border-radius: 50px;
+    text-align: center;
+    font-weight: 700;
+    background-color: var(--main-m);
+}
+
+.credits:hover,
+.top:hover{
+    font-size: 1.2em;
+    font-weight: 800;
+}
+
+.credits a{
+    color: var(--background-color);
+    text-decoration: none;
+}
+
+.top{
+    background-color: var(--background-color);
+}
+
+.top a{
+    color: var(--secondary-b);
+    text-decoration: none;
+}
+
+
+
+/* medium brakpoint */
+@media screen and (min-width: 600px) {
+    
+
+    .ciclone{
+        width: 70%;
+    }
+
+    .container-b,
+    .container-m,
+    .container-a {
+        width: 60%; 
+        max-width: 27em;
+    }
+
+    .container-b{
+        margin-left: -15%;
+    }
+    
+    .container-m{
+        margin-top: 5em;
+    }
+    
+    .container-a{
+        margin-left: 15%;
+    }
+
+    .name_m h2,
+    .name_b h2,
+    .name_a h2 {
+        font-size: 1.3em; 
+    }
+
+    .name_m h3,
+    .name_b h3,
+    .name_a h3 {
+        font-size: 0.9em; 
+    }
+
+    .quote,
+    .sinopse,
+    .about,
+    .credits,
+    .top{
+    max-width: 620px;
+    margin: 10px auto;
+    }
+
+    .quote{
+    margin-top: -80px;
+    }
+    
+    .button{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .credits,
+    .top{
+    margin-bottom: 20px;
+    width: 250px;
+    margin-left: 0;
+    margin-right: 10px;
+}
+}
+
+/* full screen */
+
+@media screen and (min-width: 950px) {
+    
+    .ciclone{
+        width: 45%;
+    }
+
+    header h2{
+        font-size: 1.4em;
+    }
+
+
+    .container-b,
+    .container-m,
+    .container-a {
+        width: 27em; 
+    }
+    
+    .name_m h2,
+    .name_b h2,
+    .name_a h2 {
+        font-size: 1.2em; 
+    }
+
+    .name_m h3,
+    .name_b h3,
+    .name_a h3 {
+        font-size: 1em; 
+    }
+
+    .quote,
+    .sinopse,
+    .about,
+    .credits,
+    .top{
+    max-width: 800px;
+    font-size: 1.1em;
+    }
+
+}

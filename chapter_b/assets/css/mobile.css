@@ -1,0 +1,595 @@
+/* css alícia */
+
+:root {
+    --background-color:rgb(249, 246, 238);
+    --main-b: rgb(198, 214, 240);
+    --secondary-b: rgb(132, 180, 153);
+    --main-m: rgb(236, 197, 100);
+    --secondary-m: rgb(130, 75, 137) ;
+    --main-a: rgb(240, 189, 219);
+    --secondary-a: rgb(220, 124, 73) ;
+}
+
+@font-face {
+    font-family: "Nunito";
+    src: url(../fonts/Nunito-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Nunito_Italic";
+    src: url(../fonts/Nunito-Italic-VariableFont_wght.ttf);
+}
+
+*{ box-sizing: border-box;}
+
+html, body{
+    width: 100vw;
+    height: 100%;
+    font-family: "Nunito", Arial, sans-serif;
+    font-size: 0.8em;
+    color: var(--secondary-b); 
+    background-color: var(--background-color);
+    overflow: hidden;
+}
+
+#page {
+    display: block;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--background-color);
+  }
+  
+#fundoverde {
+    display: block;
+    position: relative;
+    background-color: var(--secondary-b);
+    width: 90%;
+    height: 100vh;
+    margin: 1.5em auto;
+  }
+  
+#fundo {
+    display: block;
+    position: absolute;
+    background-color: var(--main-b);
+    border: 2px solid var(--secondary-b);
+    width: 100%;
+    height: 100vh;
+    margin-top: 1em;
+    margin-left: 1em;
+  }
+  
+header {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 2em;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-b);
+  }
+  
+header p {
+    display: block;
+    position: absolute;
+    font-weight: 500;
+  }
+  
+main {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+  
+section {
+    display: block;
+    position: absolute;
+    width: 80%;
+    height: 75%;
+    top: 5em;
+    left: 13%;
+    box-sizing: border-box;
+  }
+
+section p{
+    font-size: 1.1em;
+}
+  
+aside {
+    display: block;
+    position: relative;
+    width: 10em;
+    height: 3em;
+    box-sizing: border-box;
+  }
+  
+aside h1 {
+    display: block;
+    background-color: var(--secondary-b);
+    padding: 1em;
+    position: relative;
+    color: var(--background-color);
+  }
+
+h1 {
+    font-weight: 800;
+  }
+
+h2 {
+    font-weight: 700;
+  }
+  
+img {
+    width: 60%;
+    height: 60%;
+  }
+
+aside ul {
+    display:none;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    flex-direction:column;
+  }
+  
+aside ul li {
+    display: inline-block;
+    position: relative;
+    width: 10em;
+    border: 1px solid var(--secondary-b);
+    background-color: var(--background-color);
+    padding: 0.7em 1em 0.7em 1em;
+  }
+  
+aside:hover ul{
+    display:block;
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondary-b);
+  }
+
+#fundopeq {
+    display: block;
+    position: absolute;
+    background-color: var(--secondary-b);
+    width: 80%;
+    height: 35%;
+    top: 4em;
+    left: 10%;
+}
+
+#texto{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 48%;
+    background-color: var(--background-color);
+    line-height: 1.2;
+    box-sizing: border-box;
+    padding: 2.5em; 
+    overflow: hidden;
+}
+  
+#gostos {
+    display: flex;
+    position: relative;
+    width: 100%;
+  }
+  
+.quad {
+    display: inline-block;
+    position: relative;
+    width: 2em;
+    height: 2em;
+    border: 2px solid var(--secondary-b);
+    background-color: var(--background-color);
+    border-radius:1em;
+}
+
+.rect {
+    display:block;
+    position: relative;
+    width: 90%;
+    height: 2em;
+    padding: 0.5em;
+    border: 2px solid var(--secondary-b);
+    background-color: var(--background-color);
+    border-radius: 1em;
+    overflow: hidden;
+  }
+
+.rectcomnt{
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 51.5%;
+}
+  
+.comment {
+    display: flex;
+    position: relative;
+    width: 98%;
+    bottom: 0;
+  }
+  
+#comment-input {
+    display: inline-block;
+    position: relative;
+    width: 90%;
+    height: 2.2em;
+    border: 2px solid var(--secondary-b);
+    background-color: var(--background-color);
+    border-radius: 1em;
+    padding-left: 0.5em;
+    z-index: 2;
+    margin-left:0.1em;
+    margin-right: 0.1em;
+  }
+
+#comment-input::placeholder{
+  color: var(--secondary-b);
+  font-size: 0.8em;
+}
+  
+#comment-btn {
+    display: inline-block;
+    position: relative;
+    width: 4em;
+    height: auto;
+  }
+  
+#comment-btn:hover {
+    transition: transform 0.2s ease;
+    transform: scale(1.1);
+  }
+  
+#comments {
+    display: block;
+    position: absolute;
+    width: 90%;
+    height: 50vh;
+    padding: 10px;
+    background-color: var(--background-color);
+    border-radius: 1em;
+    margin-top: 3.2em;
+    height: max-content;
+  }
+
+#comments h2{
+  margin-bottom: 0.5em;
+}
+
+#commentslista{
+  overflow: scroll;
+}
+  
+#quadgosto {
+    display: inline-block;
+    position: relative;
+    width: 2.5em;
+    height: 2.5em;
+    border: 2px solid var(--secondary-b);
+    background-color: var(--secondary-b);
+    border-radius: 1em;
+    overflow: hidden;
+  }
+  
+#quadgosto img {
+    width: 60%;
+    height: 60%;
+    transition: transform 0.5s ease;
+    margin: 4px auto auto 4px;
+  }
+  
+#quadgosto.clicked img {
+    transform: scale(1.5);
+  }
+  
+#pop-up {
+    display: block;
+    position: absolute;
+    bottom: 20em;
+    right: 5em;
+    width: 10em;
+    height: 7em;
+    transition: all 0.3s ease;
+    z-index: 1;
+  }
+
+#pop-up img{
+  width: 100%;
+  height: auto;
+}
+  
+#pop-up:hover {
+    width: 22em;
+    height: 19em;
+    z-index: 4;
+  }
+  
+#pop-up2 {
+    display: block;
+    position: absolute;
+    top: 5em;
+    right: 10em;
+    width: 5em;
+    height: 5em;
+    transition: all 0.5s ease;
+    z-index: 1;
+    background-color: var(--secondary-b);
+    border-radius: 1em;
+  }
+
+#pop-up2 img{
+  width: 100%;
+  height: auto;
+}
+  
+#pop-up2:hover {
+    width: 12em;
+    height: 12em;
+  }
+  
+#pop-up3 {
+    display: block;
+    position: absolute;
+    bottom: 5em;
+    left: 4em;
+    width:10em;
+    height: 4em;
+    border-radius: 1em;
+    background-color: var(--secondary-b);
+    transition: all 0.3s ease;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+#pop-up3 img{
+  width: 100%;
+  height: auto;
+}
+  
+#pop-up3:hover {
+    width: 20em;
+    height: 14em;
+    background-color: var(--secondary-b);
+  }
+   
+@media screen and (min-width: 576px) and (max-width:900px){
+
+  html,body{
+    font-size: 1em;
+
+  }
+
+    /* alterar tamanhos dos quadrados no header */
+    .quad{
+        width: 2.5em;
+        border-radius: 0.9em;
+    }
+
+    .rect{
+        border-radius: 0.9em;
+    }
+
+    #fundopeq {
+      height: 40%;
+    }
+
+    #texto{
+      padding: 2em;
+      height: 55%;
+    }
+    #quadgosto {
+      width: 2.2em;
+      height: 2.2em;}
+      
+    #quadgosto img {
+      margin: 6px auto auto 6px;
+    }
+ 
+    .rectcomnt{
+      height: 44.5%;
+    }
+
+    #comment-input{
+      font-size: 1em;
+      width: 98%;
+      margin-left: 0.1em;
+      margin-right: 0.1em;
+    }
+
+    #comment-btn{
+      width: 3em;
+    }
+
+    /* alterar o tamanho dos comentários */
+    #comments{
+        margin-top: 2.5em;
+    }
+
+    #quadgosto{
+      height: 2.2em;
+    }
+
+    /* alterar o sitio dos pop ups */
+    #pop-up{
+        bottom: 15em;
+        right: 1em;
+        width: 7em;
+        height: 5em;
+        z-index: 4;
+    }
+
+    #pop-up2{
+        top: 4em;
+        right: 13em;
+        width: 6em;
+        height: 6em;
+
+    }
+
+    #pop-up3{
+        bottom: 5em;
+        left: 5em;
+        width: 6em;
+        height: 4em;
+        z-index: 4;
+    }
+
+}
+
+@media screen and (min-width: 901px) {
+    /* alterar tamanho letra */
+    html, body{
+      font-size: 1em;
+      overflow: hidden;
+    }
+
+    #fundoverde {
+      width: 80%;
+      margin: 1em auto;
+    }
+
+    #fundo {
+      margin-top: 1.5em;
+      margin-left: 1.5em;
+    }
+
+    #fundopeq {
+      width: 65%;
+      height: 36%;
+      top: 13%;
+      left: 18%;
+    }
+
+    section {
+      width: 65%;
+      height: 75%;
+      top: 15%;
+      left: 20%;
+    }
+
+    /* mudar disposição do aside */ 
+    aside {
+      display: block;
+      position: relative;
+      width: 10em;
+      box-sizing: border-box;
+    }
+    
+    aside h1 {
+      width: 10em;
+      padding: 1em;
+      text-align: center;
+    }
+
+    aside ul {
+      display: flex;
+      position: absolute;
+    }
+
+    aside ul li {
+      width: 10em;
+      height: 2em;
+      padding: 1em 1em 1.5em 1em;
+      justify-content: center;
+    }
+
+    aside ul li:hover {
+      color: var(--background-color);
+      background-color: var(--secondary-b);
+      border: 1px solid var(--background-color);
+    }
+
+    #texto{
+      height:50%;
+      overflow: hidden;
+    }
+
+    .rectcomnt{
+      height: 49.5%;
+    }
+
+    .rect {
+      display: inline-block;
+      width: 90%;
+      height: 2em;
+      padding-left: 10px;
+   }
+
+    .quad{
+      border-radius: 15px;
+      width: 2em;
+      height: 2em;
+    }
+
+   #comment-input {
+    height: 2.7em;
+    width: 98%;
+    margin-right: 0.1em;
+    margin-left: 0.1em;
+    }
+  
+    /* letra comentário maior */
+    #comment-input::placeholder{
+      font-size: 1.1em;
+    }
+    
+    #comment-btn {
+      width: 3em;
+      }
+
+    #comments{
+      margin-top: 2.5em;
+      width: 92%;
+      overflow: scroll;
+    }
+
+    #quadgosto {
+      width: 2.2em;
+      height: 2.2em;}
+      
+    #quadgosto img {
+      margin: 6px auto auto 6px;
+    }
+        
+    #pop-up {
+      bottom: 4em;
+      right: 5em;
+      z-index: 4;
+    }
+    #pop-up2 {
+      right: 15em;
+      width:7em;
+      height: 7em;
+    }
+
+    #pop-up2:hover{
+      width: 17em;
+      height: 17em;
+    }
+    
+    #pop-up3 {
+        bottom: 3em;
+        left: 5em;
+        width: 12em;
+        height: 4em;
+        z-index: 3;
+    }
+
+    #pop-up3:hover{
+      width: 24em;
+      height: 16em;
+    }
+    
+
+}
+
+

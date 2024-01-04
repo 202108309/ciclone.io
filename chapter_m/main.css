@@ -1,0 +1,423 @@
+/* css -- André */
+
+:root {
+  --background-color:rgb(249, 246, 238);
+  --main-b: rgb(198, 214, 240);
+  --secondary-b: rgb(132, 180, 153);
+  --main-m: rgb(236, 197, 100);
+  --secondary-m: rgb(130, 75, 137) ;
+  --main-a: rgb(240, 189, 219);
+  --secondary-a: rgb(220, 124, 73) ;
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url(../chapter_m/fonts/Nunito-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Nunito_Italic";
+  src: url(../chapter_m/fonts/Nunito-Italic-VariableFont_wght.ttf);
+}
+
+/* editing the scroll bar -- https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp */
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--main-m);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-m);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-b); }
+
+  
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  header{
+    height: 10vw;
+    display: flex;
+  }
+  
+  body {
+    height: 110vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background-color: var(--main-m);
+    margin: 0; 
+  }
+
+.menu {
+  height: 3vw;
+  width: 12vw;
+  margin: 0 auto;
+  position: absolute;
+  display: inline-block;
+  color: var(--background-color);
+  background-color: var(--secondary-m);
+  font-family: "Nunito", Arial, Helvetica, sans-serif; 
+  border-radius: 50px;
+  top: 50px; 
+  left: 50%;
+  transform: translateX(-50%); 
+  box-shadow: 0px 3px 15px rgba(90, 52, 95, 0.3);
+}
+
+
+.opcoes {
+  display: none;
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  background-color: var(--background-color);
+  font-family: "Nunito", Arial, Helvetica, sans-serif; 
+  z-index: 1;
+  top: 30px; 
+  width: 12vw; 
+  border-radius: 15px;
+  box-shadow: 0px 3px 15px rgba(90, 52, 95, 0.3);
+}
+
+.opcoes li {
+  padding: 8px 12px;
+  text-align: center;
+}
+
+.opcoes a {
+  text-decoration: none;
+  color: var(--secondary-m);
+}
+
+.menu:hover .opcoes {
+  display: block;
+  top: 3vw; 
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: var(--background-color); 
+  font-size: 20px; 
+}
+  
+  .carta {
+    height: 20%;
+    display: flex;
+    text-align: center;
+    position: relative;
+    justify-content: center;
+    transition: transform 0.5s ease;
+  }
+
+  .carta:hover {
+    transform: scale(1.06);
+  }
+
+  .texto{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: none;
+    margin-top: 110%;
+  }
+
+  .wrapper {
+    height: 200px;
+    width: 300px;
+    background-color: var(--secondary-m);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+    box-shadow: 0px 3px 15px rgba(90, 52, 95, 0.3);
+  }
+
+  .lid {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-right: 150px solid transparent;
+    border-bottom: 100px solid transparent;
+    border-left: 150px solid transparent;
+    transform-origin: top;
+    transition: transform 0.25s linear;
+  }
+  
+  .lid.one {
+    border-top: 100px solid #824b89;
+    transform: rotateX(0deg);
+    z-index: 3;
+    transition-delay: 0.75s;
+  }
+  
+  .lid.two {
+    border-top: 100px solid #824b89;
+    transform: rotateX(90deg);
+    z-index: 1;
+    transition-delay: 0.5s;
+    
+  }
+  
+  .envelope {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-top: 100px solid transparent;
+    border-right: 150px solid #ccaed2;
+    border-bottom: 100px solid #ccaed2;
+    border-left: 150px solid #b271bc;
+    z-index: 3;
+  }
+  
+
+.letter {
+    position: absolute;
+    top: 0;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    border-radius: 15px;
+    z-index: 2;
+    transition: transform 0.5s ease, box-shadow 0.5s ease; 
+    box-shadow: 0px 3px 15px rgba(90, 52, 95, 0.3);
+     
+  }
+
+  .letter h5{
+    font-size: 20px; 
+    font-family: "Nunito", Arial, Helvetica, sans-serif; 
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--secondary-m);
+    margin-top: 25px;
+    margin-right: 15px;
+    text-align: right;
+  }
+  
+  .wrapper:hover .lid.one {
+      transform: rotateX(90deg);
+      transition-delay: 0s;
+  }
+  
+  .wrapper:hover .lid.two {
+      transform: rotateX(180deg);
+      transition-delay: 0.25s;
+  }
+  
+  .wrapper:hover .letter {
+    transform: translateY(-50px);
+    transition-delay: 0.5s;
+  }
+
+  
+  .triângulo {
+    width: 0;
+    height: 0;
+    border-left: 49.5vw solid transparent;
+    border-right: 49.5vw solid transparent;
+    border-bottom: 20vw solid var(--secondary-m);
+    margin: auto;
+  }
+
+  .fundocarta {
+    width: 100%;
+    height: 100vw;
+    background-image: url(../chapter_m/assets/graphics/fundoroxo.png);
+    background-size: cover;
+    position: relative; 
+    z-index: 1;
+    overflow: visible;
+  }
+
+  .cartatextura {
+  width: 70vw;
+  height: 90vw;
+  background-color: var(--background-color);
+  position: absolute; 
+  top: 9vw; 
+  left: 15vw; 
+  z-index: 2; 
+  border-radius: 15px;
+  box-shadow: 0px 3px 15px rgba(90, 52, 95, 0.3);
+  
+  }
+
+  .data {
+    display: flex;
+    position: absolute;
+    height: 18vw;
+    margin: 5vw;
+  }
+
+  .assinatura {
+    display: flex;
+    position: absolute;
+    height: 18vw;
+    top: 60%;
+    margin: 5vw;
+    margin-left: 40vw ;
+  }
+  
+  .texto-dentro {
+  margin-top: 20vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  padding: 20px;
+  color: var(--secondary-m);
+  line-height: 1.5;
+  font-family: "Nunito", Arial, Helvetica, sans-serif; 
+  font-size: 18px;
+  overflow: visible;
+}
+
+@media only screen and (max-width: 768px) {
+body {
+  width: 100%;
+  height: 210vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  background-color: var(--main-m);
+  margin: 0; 
+}
+header{
+  width: 100%;
+}
+
+  .menu {
+    position: absolute;
+  display: inline-block;
+    width: 20%; 
+    margin-top: 5vw;
+    text-align: center;
+    padding: 3vw;
+    top: 0; 
+  }
+
+  .opcoes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    list-style: none;
+    width: 20vw; 
+    top: 3vw; 
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 3vw; 
+    padding: 0; 
+    background-color: var(--background-color);
+    border-radius: 15px;
+    box-shadow: 0px 3px 15px rgba(90, 52, 95, 0.3);
+    display: none;
+  }
+
+  .menu:hover .opcoes {
+    display: block; 
+  }
+
+    .carta {
+      height: 20%;
+      display: inline;
+      transform: translate(25vw, 0px);
+      margin-top: 40vw;
+      position: absolute;
+      justify-content: center;
+      top: 0px;
+      
+  }
+
+  .wrapper {
+    height: 120px;
+    width: 230px;
+    position: absolute;
+    display: flex;
+    background-color: var(--secondary-m);
+    justify-content: center;
+    z-index: 0;
+    box-shadow: 0px 3px 15px rgba(90, 52, 95, 0.3);
+    margin-top: 10vw;
+    margin-bottom: 30vw;
+  }
+
+  .fundocarta {
+    width: 100%;
+    height: 170%;
+    background-image: url(../chapter_m/assets/graphics/fundoroxo.png);
+    position: relative; 
+    background-size: cover;
+
+  }
+
+  .carta:hover {
+    transform: translate(25vw, 0px);
+  }
+  .cartatextura {
+    width: 90vw;
+    height: 190vw;
+    top: 9vw;
+    left: 5vw;
+  }
+
+  .texto-dentro {
+    margin-top: 25vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    padding: 20px;
+    font-size: 14px; 
+  }
+
+  .assinatura img,
+  .data img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .assinatura {
+    display: flex;
+    position: absolute;
+    height: 18vw;
+    top: 70%;
+    margin-left: 60vw ;
+  }
+
+  .letter {
+    height: 100%;
+  }
+
+  .envelope,
+  .lid.one,
+  .lid.two {
+    border-top-width: 70px;
+    border-right-width: 110px;
+    border-bottom-width: 70px;
+    border-left-width: 120px;
+  }
+}
+
+
